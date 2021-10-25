@@ -1,5 +1,5 @@
-name: httpd
-replicas: 1
+name: httpd1
+replicas: 5
 
 image: library/httpd
 # dockercfg: ${artifact.source.dockerconfig}
@@ -14,7 +14,7 @@ serviceType: LoadBalancer
 
 # A Service can map an incoming port to any targetPort.
 # targetPort is where application is listening on inside the container.
-servicePort: 80
+servicePort: 8081
 serviceTargetPort: 80
 
 # Specify all environment variables to be added to the container.
