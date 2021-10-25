@@ -39,7 +39,7 @@ spec:
         image: nginx:1.14.2
         ports:
         {{- if .Values.containerPort}}
-        - containerPort:: {{.Values.containerPort}}
+        - containerPort: {{.Values.containerPort}}
         {{- end}}
         resources:
           limits:
