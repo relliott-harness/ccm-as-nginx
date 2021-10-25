@@ -13,5 +13,4 @@ spec:
   - port: {{.Values.servicePort}}
   {{- end}}  
   selector:
-    app: nginx
-    name: {{.Values.name}}
+    app: nginx02
