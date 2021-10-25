@@ -1,7 +1,7 @@
 name: httpd
 replicas: 1
 
-image: ${artifact.metadata.image}
+image: library/httpd
 dockercfg: ${artifact.source.dockerconfig}
 
 createNamespace: true
