@@ -13,12 +13,11 @@ spec:
   {{- end}}
   selector:
     matchLabels:
-      app: nginx
+      run: {{.Values.svcName}}
   template:
     metadata:
       labels:
-        app: nginx02
-        name: {{.Values.svcName}}
+        run: {{.Values.svcName}}
     spec:
       dnsPolicy: ClusterFirst
       nodeSelector:
