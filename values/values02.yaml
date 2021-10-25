@@ -1,4 +1,5 @@
 name: my-big-nginx-dply-02
+svcName: my-big-nginx-02
 replicas: 5
 containerPort: 9082
 image: "nginx:1.14.2"
