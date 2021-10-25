@@ -2,7 +2,7 @@ name: httpd
 replicas: 1
 
 image: library/httpd
-dockercfg: ${artifact.source.dockerconfig}
+# dockercfg: ${artifact.source.dockerconfig}
 
 createNamespace: true
 namespace: httpd
