@@ -3,4 +3,4 @@ svcName: my-big-nginx-01
 replicas: 5
 containerPort: 9081
 image: "nginx:1.14.2"
-lbPort: 7081
+targetPort: 7081
