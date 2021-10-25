@@ -5,7 +5,7 @@ metadata:
   name: {{.Values.svcName}}
   {{- end}}
   labels:
-    app: nginx
+    app: nginx02
 spec:
   type: LoadBalancer
   ports:
