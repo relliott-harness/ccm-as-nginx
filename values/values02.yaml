@@ -1,0 +1,2 @@
+name: my-big-nginx-dply-02
+replicas: 5
