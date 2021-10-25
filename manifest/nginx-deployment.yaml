@@ -5,7 +5,8 @@ metadata:
   name: {{.Values.name}}
   {{- end}}
   labels:
-    app: nginx
+    app: nginx02
+    name: {{.Values.name}}
 spec:
   {{- if .Values.replicas}}
   replicas: {{.Values.replicas}}
