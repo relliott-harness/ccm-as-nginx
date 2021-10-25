@@ -36,7 +36,9 @@ spec:
         node-pool: general-preemptible
       containers:     
       - name: nginx
-        image: <+artifact.image>
+        {{- if .Values.image}}
+        image: {{.Values.image}}
+        {{- end}}
         ports:
         {{- if .Values.containerPort}}
         - containerPort: {{.Values.containerPort}}
