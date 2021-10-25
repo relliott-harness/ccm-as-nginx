@@ -30,7 +30,7 @@ spec:
         {{- end}}
         ports:
         {{- if .Values.servicePort}}
-        - containerPort: {{.Values.servicePort}}
+        - containerPort: {{.Values.servicePort}} 
         {{- end}}
         resources:
           limits:
