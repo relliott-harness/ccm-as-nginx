@@ -1,0 +1,2 @@
+name: <+pipeline.stages.deploy.variables.serviceName>
+replicas: <+pipeline.stages.deploy.variables.replicas>
