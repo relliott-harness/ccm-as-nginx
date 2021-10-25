@@ -5,8 +5,7 @@ metadata:
   name: {{.Values.svcName}}
   {{- end}}
   labels:
-    app: nginx
-    name: {{.Values.svcName}}
+    run: {{.Values.svcName}}
 spec:
   type: LoadBalancer
   ports:
@@ -14,5 +13,4 @@ spec:
   - port: {{.Values.servicePort}}
   {{- end}}  
   selector:
-    app: nginx
-    name: {{.Values.svcName}}
+    run: {{.Values.svcName}}
