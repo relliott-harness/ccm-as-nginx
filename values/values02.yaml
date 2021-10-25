@@ -1,2 +1,3 @@
 name: my-big-nginx-dply-02
 replicas: 5
+containerPort: 9082
