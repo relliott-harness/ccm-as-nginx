@@ -27,9 +27,7 @@ spec:
         image: {{.Values.image}}
         {{- end}}
         ports:
-        {{- if .Values.servicePort}}
-        - containerPort: {{.Values.servicePort}} 
-        {{- end}}
+        - containerPort: 8090 
         resources:
           limits:
             cpu: "0.75"
