@@ -29,9 +29,8 @@ spec:
 
         {{- end}}
         ports:
-        {{- if .Values.containerPort}}
-        - containerPort: {{.Values.containerPort}}
-          protocol: TCP
+        {{- if .Values.servicePort}}
+        - containerPort: {{.Values.servicePort}}
         {{- end}}
         resources:
           limits:
