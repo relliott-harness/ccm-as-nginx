@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-nginx-svc
+  name: my-big-nginx-svc
   labels:
     app: nginx
 spec:
@@ -14,11 +14,11 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx
+  name: my-big-nginx-dply
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: nginx
@@ -27,7 +27,10 @@ spec:
       labels:
         app: nginx
     spec:
+      nodeSelector:
+        node-pool: general-preemptible
       containers:
+      
       - name: nginx
         image: nginx:1.14.2
         ports:
