@@ -9,7 +9,9 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
+  {{- if .Values.lbPort}}
+  - port: {{.Values.lbPort}}
+  {{- end}}  
   selector:
     app: nginx
 apiVersion: apps/v1
