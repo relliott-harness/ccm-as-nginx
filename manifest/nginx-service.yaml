@@ -9,8 +9,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  {{- if .Values.servicePort}}
-  - port: {{.Values.servicePort}}
-  {{- end}}  
+  - port: 90
+    protocol: TCP
   selector:
     run: {{.Values.svcName}}
