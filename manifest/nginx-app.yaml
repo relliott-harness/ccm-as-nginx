@@ -45,11 +45,12 @@ spec:
       - name: nginx
         {{- if .Values.image}}
         image: {{.Values.image}}
-        protocol: TCP
+
         {{- end}}
         ports:
         {{- if .Values.containerPort}}
         - containerPort: {{.Values.containerPort}}
+          protocol: TCP
         {{- end}}
         resources:
           limits:
