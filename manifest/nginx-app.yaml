@@ -7,6 +7,7 @@ metadata:
   labels:
     app: nginx
 spec:
+  type: ClusterIP
   ports:
   {{- if .Values.lbPort}}
   - port: {{.Values.lbPort}}
