@@ -1,6 +1,6 @@
 name: my-big-nginx-dply-01
 svcName: my-big-nginx-01
 replicas: 5
-containerPort: 9081
+servicePort: 9081
 image: "nginx:1.14.2"
-targetPort: 7081
+containerPort: 7081
