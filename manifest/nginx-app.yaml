@@ -7,10 +7,10 @@ metadata:
   labels:
     app: nginx
 spec:
-  type: LoadBalancer
   ports:
   {{- if .Values.lbPort}}
   - port: {{.Values.lbPort}}
+    protocol: TCP
   {{- end}}  
   selector:
     app: nginx
